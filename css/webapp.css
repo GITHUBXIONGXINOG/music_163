@@ -1,0 +1,219 @@
+@charset "UTF-8";
+*{
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+}
+html{
+    font-size: 26.67vw;
+
+}
+.iconfont {/*iconfont样式*/
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+header{
+    height: 0.49rem;
+    background: #d43b33;
+    width: 100%;
+    /*弹性布居*/
+    display: flex;
+    justify-content: space-between;/*在主轴上的对齐方式*/
+}
+body{
+    display: flex;
+    /*column：主轴为垂直方向，起点在上沿。*/
+    flex-direction: column;/*主轴的方向*/
+}
+header>.iconfont{
+    width: 0.54rem;
+    font-size: 0.24rem;
+    color: #fcf3ff;
+    display: flex;
+    align-items: center;/*align-items 属性定义flex子项在flex容器的当前行的侧轴（纵轴）方向上的对齐方式*/
+    justify-content: center;/*在主轴上的对齐方式*/
+}
+header form{
+    flex: 1; /*占用所有空间,让所有弹性盒模型对象的子元素都有相同的长度，且忽略它们内部的内容：*/
+    background: #fff;
+    height: 0.3rem;
+    align-self: center;/*align-self 属性定义flex子项单独在侧轴（纵轴）方向上的对齐方式*/
+    display: flex;
+    border-radius: 5px;/*边框圆角*/
+    overflow: hidden;
+}
+
+header form .iconfont{
+    padding-left: 0.47rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.14rem;
+    color: #c8c8c8;
+}
+
+header form input{
+    border: none;
+    flex:1;
+    font-size: 0.14rem;
+    color: #c8c8c8;
+    padding-left: 0.19rem;
+}
+nav{
+    height: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    padding:  0 0.1rem  ;
+}
+nav a{
+    border-bottom: 4px solid #fff;
+    display: flex;
+    align-items: center; /*定义flex子项在flex容器的当前行的纵轴方向的对齐方式*/
+    padding: 0.06rem  /* 12/200 */;
+}
+nav a:first-child{
+    color: #c04033;
+    border-color:#c04033 ;
+}
+
+main{
+    flex: 1; /*由于移动端的页面高度不同,不能写死,用flex:1占满页面*/
+    overflow: auto;/*overflow 属性规定当内容溢出元素框时发生的事情。auto如果内容被裁剪,使用滚动条显示*/
+}
+
+main .content .banner{
+    height: 1.39rem;
+
+}
+main .content .banner img{
+    height:100%;
+    width: 100%;
+
+}
+
+main .content .adcontent{
+    display: flex;
+    align-items: center;
+    height: 1.03rem;
+
+    border-bottom: 2px rgb(242, 242, 242) solid;
+}
+
+
+main .content .adcontent dl{
+    width: 33.3%;
+    display: flex;
+    justify-content: center;/*水平对齐*/
+    align-items: center;/*垂直对齐*/
+    flex-direction: column;/*对齐方向*/
+
+}
+
+main .content .adcontent dl .iconfont{
+    width: 0.54rem;
+    height: 0.54rem;
+    border: 1px solid #d63934;
+    border-radius: 50%;
+    font-size: 0.25rem;
+    color: #d2382c;
+    display: flex;
+    justify-content: center;/*横轴方向对齐方式*/
+    align-items: center;/*纵轴方向上对齐方式*/
+}
+/*中间较大的唱片*/
+main .content .adcontent dl:nth-child(2) .iconfont{
+  font-size: 0.35rem;
+}
+
+main .content .adcontent dl dd{
+    font-size: 0.11rem;
+    margin-top: 0.07rem;
+}
+
+main .content .title{
+    height: 0.45rem;
+    display: flex;
+    justify-content: space-between;/*左右对齐*/
+    padding: 0 0.1rem;
+}
+main .content .title aside:first-child{
+    padding-top:0.2rem;
+}
+main .content .title aside:first-child .iconfont{
+    font-seze:0.15rem;
+    color: #c04736;
+
+}
+
+main .content .title aside:first-child span{
+    font-seze:0.15rem;
+
+}
+main .title aside:last-child{
+    font-size: 0.1rem;
+    padding-top:0.2rem;
+}
+
+main .imglist{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:0 0.1rem ;
+}
+main .imglist dl{
+    width: 1.14rem;
+    margin-top: 0.18rem;
+}
+
+main .imglist dl dd{
+    font-size: 0.12rem;
+    line-height: 0.16rem;
+}
+
+main .imglist dl dt img{
+    width: 1.14rem;
+    height: 1.14rem;
+    margin-top:0.07rem ;
+}
+
+main .artfoot{
+    height: 0.48rem;
+}
+footer{
+    height: 0.48rem;
+    width: 100%;
+    position: fixed;/*固定定位*/
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.27rem;
+}
+footer aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer aside .iconfont{
+    color: #b2a2a0;
+    font-size: 0.25rem;
+
+
+}
+
+footer aside span{
+    color: #b2a2a0;
+    font-size: 0.1rem;
+}
+
+footer aside:first-child .iconfont{
+    color: #fff;
+}
+footer aside:first-child span{
+    color: #fff;
+}
